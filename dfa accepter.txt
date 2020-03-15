@@ -1,0 +1,30 @@
+f=open("input.txt")
+
+def evaluate(cuvant):
+    stare_curenta = q0
+    for litera in cuvant:
+        am_stare=0
+        for tran in arce:
+            if tran[0]==stare_curenta and tran[1]==litera:
+                am_stare=1
+                stare_curenta=tran[2]
+                break;
+        if am_stare==0:
+            return False
+    if stare_curenta in F:
+        return True
+    return False
+
+
+
+inp = f.read().split()
+n = int(inp[0])
+m = int(inp[1])
+alfabet = [x for x in inp[2:m+2]]
+q0 = inp[m+2]
+k = int(inp[m+3])
+F = inp[m+4:m+4+k]
+l = int(inp[m+4+k])
+arce = [tran for tran in inp[m+5+k:]]
+print(evaluate("axbacbbzbbaaa"))
+
