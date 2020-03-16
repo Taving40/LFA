@@ -1,4 +1,4 @@
-f=open("input.txt")
+f=open("input_for_lnfa.txt")
 
 def proceseaza_lamda(stari_curente):
     global arce
