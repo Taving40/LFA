@@ -56,4 +56,4 @@ l = int(inp[m+4+k]) #numar legaturi intre stari
 arce = [tran for tran in inp[m+5+k:]]   #legaturi intre stari
 
 print((evaluate("ab")))
-
+f.close()
